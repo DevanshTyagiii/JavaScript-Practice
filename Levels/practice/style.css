@@ -1,0 +1,13 @@
+.add{
+    border: none;
+    border-radius: 12px;
+    background-color: lightgreen;
+    padding: 5px 15px;
+}
+.move{
+    background-color: lightgray;
+    border: solid;
+    border-radius: 8px;
+    padding: 5px 30px;
+    text-transform: uppercase;
+}
