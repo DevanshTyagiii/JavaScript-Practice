@@ -9,6 +9,8 @@ document.querySelector('#bagValue').innerText = `Your bag is worth $${bagValue}`
 
 let name = "Devansh";
 
+console.log(eval('2+2'));
+
 document.querySelector('#name').innerText = `My name is ${name}`;
 
 document.querySelector('#pi').innerText = `The value of pi is approximately ${pi}`;
