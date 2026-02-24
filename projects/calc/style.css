@@ -1,5 +1,40 @@
 #calculator{
     border: 1px solid;
     border-radius: 8px;
-    width: 200px;
+    width: 300px;
+    height: 415px;
+}
+
+#display{
+    border: 1px solid;
+    border-radius: 8px;
+    width: 271px;
+    height: 30px;
+    margin: 10px;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 25px;
+}
+
+.button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button{
+    width: 52px;
+    height: 52px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 8px;
+}
+.buttonn{
+    width: 125px;
+    height: 52px;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 8px;
 }
