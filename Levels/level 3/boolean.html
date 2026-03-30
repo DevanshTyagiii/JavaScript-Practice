@@ -15,16 +15,22 @@
         console.log(typeof('true'));
         console.log("Checking if u can drive or not");
         let age = 19;
-        if (age>=18) {
+        if (age>=18 && age<=65) {
             console.log("You can drive");
         }
         else {
             console.log("use a bicycle");
         }
-        if (age>=18) {
+    
+        if (age<18 || age>65) {
+            console.log("use a bicycle");
+        }
+        else {
             console.log("You can drive");
         }
 
-    </script>
+        
+
+    </script>   
 </body>
 </html>
