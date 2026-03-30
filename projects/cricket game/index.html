@@ -10,8 +10,7 @@
     <div class="game">
         <h1>BAT BALL STUMP GAME</h1>
         <button class="btn" onclick="
-       
-        console.log('you have chosen Bat🏏');
+        
         let rn = Math.random() * 3;
         let cc; 
         if(rn > 0 && rn <= 1){
@@ -21,21 +20,65 @@
         } else {
             cc = 'Stump'
         }
-        console.log('Computer choice is ${cc}')
 
+        let resultMsg;
         if(cc === 'Ball') {
-            console.log('You Won');
+            resultMsg = 'You Won';
         } else if (cc === 'Bat') {
-            console.log('Its a Tie!!!')
+            resultMsg = 'Its a Tie!!!';
         } else {
-    
-            console.log('Computer won')
+            resultMsg = 'Computer won';
         }
+
+        alert(`You have chosen Bat🏏\nComputer choice is ${cc}\n${resultMsg}`)
         
         ">Bat🏏</button>
 
-        <button class="btn" onclick="">Ball🥎</button>
-        <button class="btn" onclick="">Stump \|/</button>
+        <button class="btn" onclick="
+        
+        rn = Math.random() * 3;
+        if(rn > 0 && rn <= 1){
+            cc = 'Bat';
+        } else if (rn > 1 && rn <= 2) {
+            cc = 'Ball';
+        } else {
+            cc = 'Stump';
+        }
+
+ 
+        if(cc === 'Ball') {
+            resultMsg = 'Its a Tie!!!';
+        } else if (cc === 'Bat') {
+            resultMsg = 'Computer won';
+        } else {
+            resultMsg = 'You Won';
+        }
+
+        alert(`You have chosen Ball🥎\nComputer choice is ${cc}\n${resultMsg}`);
+        
+        ">Ball🥎</button>
+
+        <button class="btn" onclick="
+        rn = Math.random() * 3;
+        if(rn > 0 && rn <= 1){
+            cc = 'Bat';
+        } else if (rn > 1 && rn <= 2) {
+            cc = 'Ball';
+        } else {
+            cc = 'Stump';
+        }
+
+        if(cc === 'Ball') {
+            resultMsg = 'Computer won';
+        } else if (cc === 'Bat') {
+            resultMsg = 'You Won';
+        } else {
+            resultMsg = 'Its a Tie!!!';
+        }
+
+        alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+        
+        ">Stump \|/</button>
     </div>
 </body>
 </html>
