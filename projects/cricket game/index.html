@@ -11,19 +11,17 @@
         <h1>BAT BALL STUMP GAME</h1>
         <button class="btn" onclick="
        
-       console.log('you have chosen Bat🏏');
+        console.log('you have chosen Bat🏏');
         let rn = Math.random() * 3;
-        var cc;
+        let cc; 
         if(rn > 0 && rn <= 1){
             cc = 'Bat';
-            console.log('computer choice is bat')
         } else if (rn > 1 && rn <= 2) {
             cc = 'Ball'
-            console.log('computer choice is ball')
         } else {
             cc = 'Stump'
-            console.log('computer choice in stump')
         }
+        console.log('Computer choice is ${cc}')
 
         if(cc === 'Ball') {
             console.log('You Won');
@@ -36,30 +34,7 @@
         
         ">Bat🏏</button>
 
-        <button class="btn" onclick="
-        
-        console.log('you have chosen Ball🥎');
-        rn = Math.random() * 3;
-        var cc;
-        if(rn > 0 && rn <= 1){
-            cc = 'Bat';
-            console.log('computer choice is bat')
-        } else if (rn > 1 && rn <= 2) {
-            cc = 'Ball'
-            console.log('computer choice is ball')
-        } else {
-            cc = 'Stump'
-            console.log('computer choice in stump')
-        }
-
-        if(cc === 'Ball') {
-            console.log('You Won');
-        } else if (cc === 'Bat') {
-            console.log('Its a Tie!!!')
-        } else {
-            console.log('Computer won')
-        }
-        ">Ball🥎</button>
+        <button class="btn" onclick="">Ball🥎</button>
         <button class="btn" onclick="">Stump \|/</button>
     </div>
 </body>
