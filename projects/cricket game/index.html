@@ -10,75 +10,68 @@
     <div class="game">
         <h1>BAT BALL STUMP GAME</h1>
         <button class="btn" onclick="
-        
-        let rn = Math.random() * 3;
-        let cc; 
-        if(rn > 0 && rn <= 1){
-            cc = 'Bat';
-        } else if (rn > 1 && rn <= 2) {
-            cc = 'Ball'
-        } else {
-            cc = 'Stump'
-        }
-
-        let resultMsg;
-        if(cc === 'Ball') {
-            resultMsg = 'You Won';
-        } else if (cc === 'Bat') {
-            resultMsg = 'Its a Tie!!!';
-        } else {
-            resultMsg = 'Computer won';
-        }
-
-        alert(`You have chosen Bat🏏\nComputer choice is ${cc}\n${resultMsg}`)
-        
+        userChoice = 'Bat🏏' 
+        generateCC();
+        printResult('Bat');
         ">Bat🏏</button>
 
         <button class="btn" onclick="
-        
-        rn = Math.random() * 3;
-        if(rn > 0 && rn <= 1){
-            cc = 'Bat';
-        } else if (rn > 1 && rn <= 2) {
-            cc = 'Ball';
-        } else {
-            cc = 'Stump';
-        }
-
- 
-        if(cc === 'Ball') {
-            resultMsg = 'Its a Tie!!!';
-        } else if (cc === 'Bat') {
-            resultMsg = 'Computer won';
-        } else {
-            resultMsg = 'You Won';
-        }
-
-        alert(`You have chosen Ball🥎\nComputer choice is ${cc}\n${resultMsg}`);
-        
+        userChoice = 'Ball🥎'
+        generateCC();
+        printResult('Ball');
         ">Ball🥎</button>
 
         <button class="btn" onclick="
-        rn = Math.random() * 3;
-        if(rn > 0 && rn <= 1){
-            cc = 'Bat';
-        } else if (rn > 1 && rn <= 2) {
-            cc = 'Ball';
-        } else {
-            cc = 'Stump';
-        }
-
-        if(cc === 'Ball') {
-            resultMsg = 'Computer won';
-        } else if (cc === 'Bat') {
-            resultMsg = 'You Won';
-        } else {
-            resultMsg = 'Its a Tie!!!';
-        }
-
-        alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
-        
+        userChoice = 'Stump'
+        generateCC();
+        printResult('Stump');
         ">Stump \|/</button>
+
+        <script>
+            let cc;
+            function generateCC() {
+                let rn = Math.random() * 3;
+                if(rn > 0 && rn <= 1){
+                 cc = 'Bat';
+                } else if (rn > 1 && rn <= 2) {
+                cc = 'Ball'
+                } else {
+                    cc = 'Stump'
+                }
+            }
+            let userChoice;
+            function printResult(a) {
+                let resultMsg;
+                if(a == 'Bat' && cc == 'Ball'){
+                    resultMsg = 'You Won!';
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Bat' && cc == 'Bat') {
+                    resultMsg = 'Its a tie';
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Bat' && cc == 'Stump') {
+                    resultMsg = 'Computer won';
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Ball' && cc == 'Bat') {
+                    resultMsg = 'Computer won';
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Ball' && cc == 'Ball') {
+                    resultMsg = 'Its a tie';
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Ball' && cc == 'Stump') {
+                    resultMsg = 'You Won!';
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Stump' && cc == 'Stump') {
+                    resultMsg = 'Its a tie';
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Stump' && cc == 'Ball') {
+                    resultMsg = 'Computer won';
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                } else if(a == 'Stump' && cc == 'Bat') {
+                    resultMsg = 'You Won!';
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                }
+            }
+        </script>
     </div>
 </body>
 </html>
