@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <script>
+        let user = {
+            name: 'Devansh Tyagi',
+            age: 40,
+        };
+        let product = {
+            company: 'Mango',
+            item_name: 'T-shirt',
+            price: 967,
+        };
+        console.log(`${user.name} \n${user.age}`);
+        console.log(product.company);
+        product.company = 'Banana'
+        console.log(product['company']);
+        delete product.company;
+        console.log(product);
+    </script>
+</body>
+</html>

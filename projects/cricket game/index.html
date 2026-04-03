@@ -28,6 +28,11 @@
         ">Stump \|/</button>
 
         <script>
+            let score = {
+                win: 0,
+                lost: 0,
+                tie: 0,
+            }
             let cc;
             function generateCC() {
                 let rn = Math.random() * 3;
@@ -44,33 +49,43 @@
                 let resultMsg;
                 if(a == 'Bat' && cc == 'Ball'){
                     resultMsg = 'You Won!';
-                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.win++;
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Bat' && cc == 'Bat') {
                     resultMsg = 'Its a tie';
-                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.tie++;
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Bat' && cc == 'Stump') {
                     resultMsg = 'Computer won';
-                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.lost++;
+                    alert(`You have chosen Bat\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Ball' && cc == 'Bat') {
                     resultMsg = 'Computer won';
-                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.lost++;
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Ball' && cc == 'Ball') {
                     resultMsg = 'Its a tie';
-                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.tie++;
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Ball' && cc == 'Stump') {
                     resultMsg = 'You Won!';
-                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.win++;
+                    alert(`You have chosen Ball\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Stump' && cc == 'Stump') {
                     resultMsg = 'Its a tie';
-                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.tie++;
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Stump' && cc == 'Ball') {
                     resultMsg = 'Computer won';
-                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.lost++;
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 } else if(a == 'Stump' && cc == 'Bat') {
                     resultMsg = 'You Won!';
-                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg}`);
+                    score.win++;
+                    alert(`You have chosen Stump\nComputer choice is ${cc}\n${resultMsg} \n\n Score --> Win:${score.win} Lost: ${score.lost} Tie: ${score.tie}`);
                 }
             }
+            
         </script>
     </div>
 </body>
