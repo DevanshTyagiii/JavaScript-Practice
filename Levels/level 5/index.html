@@ -7,21 +7,31 @@
 </head>
 <body>
     <script>
-        let user = {
-            name: 'Devansh Tyagi',
-            age: 40,
-        };
+        // let user = {
+        //     name: 'Devansh Tyagi',
+        //     age: 40,
+        // };
+        // let product = {
+        //     company: 'Mango',
+        //     item_name: 'T-shirt',
+        //     price: 967,
+        // };
+        // console.log(`${user.name} \n${user.age}`);
+        // console.log(product.company);
+        // product.company = 'Banana'
+        // console.log(product['company']);
+        // delete product.company;
+        // console.log(product);
         let product = {
             company: 'Mango',
             item_name: 'T-shirt',
             price: 967,
+            displayPrice: function() {
+                console.log(`Price of this ${this.item_name} is ₹${this.price}`);
+            }
         };
-        console.log(`${user.name} \n${user.age}`);
-        console.log(product.company);
-        product.company = 'Banana'
-        console.log(product['company']);
-        delete product.company;
-        console.log(product);
+        
+        product.displayPrice();
     </script>
 </body>
 </html>
