@@ -58,14 +58,74 @@
         a = 8;
         console.log(`a = ${a}, b = ${b}`);
         
-        
+
         
         let x = {num: 5};
         let y = x;
         console.log(`x = ${x.num}, y = ${y.num}`);
         x.num = 8;
         console.log(`x = ${x.num}, y = ${y.num}`);
+        
+        let product1 = {
+            company: 'BoAt',
+            item_name: 'Rocker Headphone',
+            price: 7899,
+        };
+        let copyProduct = product1;
+        console.log(product1);
+        copyProduct.company = 'JBL';
+        console.log(product1);
+        copyProduct.item_name = 'Stone Headphones';
+        console.log(product1);
 
+        let obj = {
+            message: 'Good Job',
+            status: 'Complete',
+        };
+        console.log(obj);
+        let {message, status} = obj;
+        console.log(message);
+        console.log(status);
+        
+        let product2 = {
+            name: 'jeans',
+            size: 'S',
+            fir: 'Slim Fit',
+            'delivery-time': 'Same day delivery',
+        }
+
+        let product3 = {
+            name: 'jeans',
+            size: 'XL',
+            fit: 'Chico',
+            'delivery-time': 'Same day delivery',
+        }
+        function isIdenticalProduct(product2, product3)
+        {
+            if(typeof product2 !== 'object' || typeof
+            product3 !== 'object') {
+                console.warn('Parameter passed was not an object');
+                return false;
+            }
+            if (product2 == product3) {
+                return true;
+            }
+
+            if (product2.name === product3.name &&
+                product2.size === product3.size &&
+                product2.fit === product3.fit) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
+
+        console.log(isIdenticalProduct(product2, ''));
+        console.log(isIdenticalProduct(product2, product2));
+        
+
+        console.log(`Price of the product is: ₹${product1.price}/-`);
 
     </script>
 </body>
