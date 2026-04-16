@@ -34,7 +34,47 @@
                 noOfReviews: 453,
             },
         };
-        
+
+        let student1 = {
+            name: 'Devansh Tyagi',
+            sap_id: '590011245',
+            specialization: 'Full Stack',
+            age: 19,
+            batch: 3,
+            displayDetails: function() {
+                console.log(`Student's Name is -> ${this.name}`);
+                console.log(`Student's Sap Id is -> ${this.sap_id}`);
+                console.log(`Student's Specialization is -> ${this.specialization}`);
+                console.log(`Student's Age is -> ${this.age}`);
+                console.log(`Student's Batch is -> ${this.batch}`);
+            }
+        };
+
+        let student2 = {
+            name: 'Aditi Tyagi',
+            sap_id: '590012432',
+            specialization: 'CCVT',
+            age: 21,
+            batch: 43,
+            displayDetails: function() {
+                console.log(`Student's Name is -> ${this.name}`);
+                console.log(`Student's Sap Id is -> ${this.sap_id}`);
+                console.log(`Student's Specialization is -> ${this.specialization}`);
+                console.log(`Student's Age is -> ${this.age}`);
+                console.log(`Student's Batch is -> ${this.batch}`);
+            }
+        };
+
+        student1.displayDetails();
+        student2.displayDetails();
+
+        let shape = {
+            name: 'Cricle',
+            sides: 'infinity',
+            area: 'pi*r*r',
+            diameter: '2r',
+        }
+        console.log(shape);
         // localStorage.setItem('name', 'Devansh Tyagi');
         // localStorage.setItem('price', '99999');
 
@@ -46,13 +86,13 @@
         // localStorage.removeItem('price');
         // localStorage.clear();
 
-        // alert('Hi my name is Devansh');
-        alert('proper ');
         let item = {
             name: laptop,
             ram: 16,   
         }
         
+        
+
         
     </script>
 </body>
