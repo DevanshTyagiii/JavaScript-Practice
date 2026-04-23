@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>okok</title>
+</head>
+<body>
+    <script>
+        let product = {
+            name: 'Jeans',
+            size: 'S',
+            fit: 'Slim Fit',
+            rating: {
+                stars: 4.5,
+                noOfReviews: 453,
+            },
+        };
+        
+        // localStorage.setItem('Name', 'Devansh Tyagi');
+        // localStorage.setItem('Price', '87656');
+
+        // console.log(localStorage.getItem('Name'));
+
+        // localStorage.setItem('Product', JSON.stringify(product));
+        // console.log(localStorage.getItem('Product'));
+        let product2 = JSON.parse(localStorage.getItem('Product'));
+        console.log(product2);
+        
+         
+
+
+
+
+    </script>
+</body>
+</html>
